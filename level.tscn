@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://djnxdmj7s1nh0"]
 
+[ext_resource type="PackedScene" uid="uid://diomsfg4xh3tl" path="res://player.tscn" id="1_u52ul"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sh265"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -13,9 +15,6 @@ sky = SubResource("Sky_4flbx")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_sh265"]
-size = Vector2(10, 10)
-
 [node name="Level" type="Node3D" unique_id=996097916]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1189647645]
@@ -25,8 +24,9 @@ environment = SubResource("Environment_onrkg")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=958514209]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+[node name="Player" parent="." unique_id=1569670765 instance=ExtResource("1_u52ul")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1206390827]
-mesh = SubResource("PlaneMesh_sh265")
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1880849006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.5, -1)
+use_collision = true
+size = Vector3(15, 1, 13)

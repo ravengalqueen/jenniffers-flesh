@@ -11,8 +11,18 @@ config_version=5
 [application]
 
 config/name="Jeniffers-flesh"
+run/main_scene="uid://djnxdmj7s1nh0"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=240
+window/size/mode=3
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
+window/stretch/scale_mode="integer"
 
 [physics]
 
