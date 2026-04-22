@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bcf2gnvuk1osl"]
+
+[ext_resource type="Texture2D" uid="uid://3ueus4kpm7s1" path="res://icon.svg" id="1_dl5o0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wvtge"]
+line_spacing = 1.0
+font_size = 8
+
+[node name="Control" type="Control" unique_id=1878409065]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1939040659]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=169961877]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer" unique_id=60243782]
+layout_mode = 2
+texture = ExtResource("1_dl5o0")
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer" unique_id=943129999]
+custom_minimum_size = Vector2(300, 20)
+layout_mode = 2
+text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+label_settings = SubResource("LabelSettings_wvtge")
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1214905269]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1490768508]
+custom_minimum_size = Vector2(96, 16)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
