@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bcf2gnvuk1osl"]
 
 [ext_resource type="Texture2D" uid="uid://3ueus4kpm7s1" path="res://icon.svg" id="1_dl5o0"]
+[ext_resource type="Script" uid="uid://d4nlhb3ch8pcy" path="res://cyoa.gd" id="1_wvtge"]
+[ext_resource type="Resource" uid="uid://dh50lv8plrksu" path="res://events/cyoa_events.tres" id="2_0h68y"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wvtge"]
 line_spacing = 1.0
@@ -13,6 +15,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wvtge")
+cyoa_event = ExtResource("2_0h68y")
 
 [node name="Panel" type="Panel" parent="." unique_id=1939040659]
 layout_mode = 1
@@ -39,6 +43,8 @@ custom_minimum_size = Vector2(300, 20)
 layout_mode = 2
 text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 label_settings = SubResource("LabelSettings_wvtge")
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1214905269]
@@ -47,6 +53,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 10
 
 [node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1490768508]
+visible = false
 custom_minimum_size = Vector2(96, 16)
 layout_mode = 2
 size_flags_horizontal = 6

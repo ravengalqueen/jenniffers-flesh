@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CyoaEvents" format=3 uid="uid://dh50lv8plrksu"]
+
+[ext_resource type="Script" uid="uid://dmue4cbtvprgn" path="res://cyoa_events.gd" id="1_cfoau"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_cfoau")
+description = "TEST"
+options = Array[String](["Test 1", "Test2"])
