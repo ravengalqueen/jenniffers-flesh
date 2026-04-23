@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://diomsfg4xh3tl"]
 
 [ext_resource type="Script" uid="uid://bnglmswawj6et" path="res://player.gd" id="1_4flbx"]
-[ext_resource type="Texture2D" uid="uid://3ueus4kpm7s1" path="res://icon.svg" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://dht2td8harbu8" path="res://TESTSPRITE.png" id="2_onrkg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4flbx"]
 size = Vector3(1, 2, 1)
@@ -14,10 +14,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_4flbx")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1362552452]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 3)
 current = true
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=873403757]
-transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+pixel_size = 0.03125
 billboard = 2
+texture_filter = 0
 texture = ExtResource("2_onrkg")

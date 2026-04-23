@@ -13,6 +13,7 @@ config_version=5
 config/name="Jeniffers-flesh"
 run/main_scene="uid://djnxdmj7s1nh0"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
 [display]
@@ -30,5 +31,13 @@ window/stretch/scale_mode="integer"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
+textures/default_filters/anisotropic_filtering_level=0
 anti_aliasing/screen_space_roughness_limiter/enabled=false
+textures/decals/filter=0
+textures/light_projectors/filter=0
+lightmapping/lightmap_gi/use_bicubic_filter=false
+environment/volumetric_fog/use_filter=0
