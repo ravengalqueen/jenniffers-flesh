@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dbwpkmj6o0mtq"]
+
+[ext_resource type="Script" uid="uid://c854nktm30r41" path="res://rooms/room_camera_3d.gd" id="2_jvq3j"]
+[ext_resource type="Script" uid="uid://cfoa48ytb3u6s" path="res://rooms/door.gd" id="3_c8bcg"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ay38w"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_4flbx"]
+sky_material = SubResource("ProceduralSkyMaterial_ay38w")
+
+[sub_resource type="Environment" id="Environment_wdyvd"]
+background_mode = 2
+sky = SubResource("Sky_4flbx")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wdyvd"]
+size = Vector3(1.9746094, 2.3546143, 2.1258545)
+
+[node name="TestRoom" type="Node3D" unique_id=935527090]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1303721376]
+environment = SubResource("Environment_wdyvd")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1969055138]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=323344427]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.5911703, -1)
+use_collision = true
+size = Vector3(15, 1, 13)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=2131643389]
+transform = Transform3D(0.88600945, 0.4636672, 0, -0.4636672, 0.88600945, 0, 0, 0, 1, 11.919136, -4.0130453, -1)
+use_collision = true
+size = Vector3(15, 1, 13)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1804074960]
+transform = Transform3D(0.0006457269, -0.99999976, 0, 0.99999976, 0.0006457269, 0, 0, 0, 1, -8.966303, 2.0013332, -1)
+use_collision = true
+size = Vector3(4, 1, 13)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1388618454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 2, 8)
+script = ExtResource("2_jvq3j")
+
+[node name="Doors" type="Node3D" parent="." unique_id=282096829]
+
+[node name="test_room_two_left" type="Area3D" parent="Doors" unique_id=1121066377]
+script = ExtResource("3_c8bcg")
+target_door_id = "test_room_one_left"
+is_locked = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Doors/test_room_two_left" unique_id=1462666586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4873047, 1.2159643, -6.376575)
+shape = SubResource("BoxShape3D_wdyvd")
+
+[node name="Camera_Limits" type="Node3D" parent="." unique_id=2130248323]
+
+[node name="X_Left" type="Marker3D" parent="Camera_Limits" unique_id=1811586294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 0)
+
+[node name="X_right" type="Marker3D" parent="Camera_Limits" unique_id=963855173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 0)

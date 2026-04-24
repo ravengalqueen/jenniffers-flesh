@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cakft2gwm322x"]
+
+[ext_resource type="Script" uid="uid://dce0u08y2xk7a" path="res://autoloads/hud.gd" id="1_lp567"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=535600912]
+script = ExtResource("1_lp567")
+
+[node name="InteractHint" type="Label" parent="." unique_id=1144703605]
+visible = false
+offset_left = 2.0
+offset_top = 218.0
+offset_right = 42.0
+offset_bottom = 241.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Press X to Interact"
+
+[node name="MessageLabel" type="Label" parent="." unique_id=656917927]
+visible = false
+offset_top = 216.0
+offset_right = 320.0
+offset_bottom = 239.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="FadeBackground" type="ColorRect" parent="." unique_id=1039687959]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
