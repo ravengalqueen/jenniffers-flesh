@@ -1,7 +1,8 @@
 extends CharacterBody3D
 var speed : float = 5.0
 
-
+func _ready():
+	velocity = Vector3.ZERO
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta

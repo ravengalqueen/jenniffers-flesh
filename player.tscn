@@ -6,7 +6,8 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_4flbx"]
 size = Vector3(1, 2, 1)
 
-[node name="Player" type="CharacterBody3D" unique_id=1569670765]
+[node name="Player" type="CharacterBody3D" unique_id=1569670765 groups=["player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33622396, 0)
 script = ExtResource("1_4flbx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=84432586]

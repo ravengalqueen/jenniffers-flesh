@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="Jeniffers-flesh"
-run/main_scene="uid://djnxdmj7s1nh0"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/use_filter=false
 config/icon="res://icon.svg"
