@@ -5,5 +5,5 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_cfoau")
-description = "TEST"
-options = Array[String](["Test 1", "Test2"])
+description = "This is a test for a CYOA Event it is not ready so bleh bad for you silly, come back soon als sorry for no image"
+options = Array[String](["Test 1", "Test2", "secret third option"])
